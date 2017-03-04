@@ -1,7 +1,7 @@
 # Godaddy DDNS Script for pfSense
 
 ## Introduction
-This script dynamically udpates GoDaddy DNS A record. I have to use Godaddy for a domain and I wanted a way to update the A record whenever the IP changed.This is particularly useful for home networks hosting websites where the domain is hosted at godaddy. This script uses the godaddy api. You can obtain information here as well as keys https://developer.godaddy.com/. Make sure you generate production keys, do not use the test key/secret.
+This script dynamically udpates GoDaddy DNS A record. I have to use Godaddy for a domain and I wanted a way to update the A record whenever the IP changed. This is particularly useful for home networks hosting websites where the domain is hosted at godaddy. This script uses the godaddy api. You can obtain information here as well as keys https://developer.godaddy.com/. Make sure you generate production keys, do not use the test key/secret.
 
 This script is not ment for @ A records. It only works on FQDN, ie hostname.domain.tld
 
@@ -29,4 +29,4 @@ Obviously you do not want to have to run this script every time the IP changes. 
 ## HAProxy
 Final note, I use HAProxy and noticed that when my IP changed, HAProxy saw the new IP attached to my WAN, but would not allow connections until HAProxy was reloaded. This script reloads HAProxy. If you do not need that function, you can remove line 108.
 
-There is a checkbox 'Reload behaviour' in HAProxy that may do this function. I have not tested, as my IP hasnt changed at the time of this writing. 
+There is a checkbox 'Reload behaviour' in HAProxy that may do this function. I have not tested, as my IP hasn't changed at the time of this writing. 
