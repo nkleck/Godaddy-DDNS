@@ -23,7 +23,7 @@ optionally you can run godaddy_ddns.py -h for these same instructions.
 Obviously you do not want to have to run this script every time the IP changes. Thats what cron is for. You can try it cmd line with crontab -e, Or you can go the easy way and install the Cron pkg in pfSense. Once the package is installed, upload your script to your pfSense box (and remember where you placed it). Then schedule your cron job. Below is a sample cron job:
 
 
-2	\*	\*	\*	\*	root	/usr/local/bin/python2.7 /home/<your user>/godaddy-ddns.py hostname.domain.tld
+2	\*	\*	\*	\*	root	/usr/local/bin/python2.7 /home/'your user'/godaddy-ddns.py hostname.domain.tld
 
 
 ## HAProxy
